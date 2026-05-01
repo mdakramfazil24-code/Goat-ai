@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My AI</title>
+</head>
+<body>
+
+<h1>AI Chatbot</h1>
+
+<input id="input" placeholder="Type...">
+<button onclick="reply()">Send</button>
+
+<p id="output"></p>
+
+<script>
+function reply(){
+ let text = document.getElementById("input").value.toLowerCase();
+ let res = "I don't understand";
+
+ if(text.includes("hi")) res = "Hello 👋";
+ else if(text.includes("name")) res = "I am AI bot 🤖";
+ else if(text.includes("help")) res = "I can answer basic questions";
+
+ document.getElementById("output").innerText = res;
+}
+</script>
+
+</body>
+</html>
